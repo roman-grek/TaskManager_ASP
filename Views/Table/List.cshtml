@@ -1,0 +1,13 @@
+@using TaskManager.Models;
+@model IEnumerable<Table>;
+
+<div>
+    <h2> All the tables</h2>
+</div>
+
+@foreach (var table in Model)
+{
+    <div>
+        <h4>Table title: @table.Title</h4>
+    </div>
+}

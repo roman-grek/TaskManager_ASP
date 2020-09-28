@@ -13,6 +13,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
+using TaskManager.Interfaces;
+using TaskManager.Repositories;
+
 namespace TaskManager
 {
     public class Startup
@@ -34,6 +37,8 @@ namespace TaskManager
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddTransient<IBoardRepository, BoardRepository>();
+            services.AddTransient<ITableRepository, TableRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
