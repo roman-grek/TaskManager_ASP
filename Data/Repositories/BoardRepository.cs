@@ -19,6 +19,8 @@ namespace TaskManager.Data.Repositories
 
         public Board GetBoardByIdAsync(int boardId) =>
             appDbContext.Boards.FirstOrDefault(p => p.BoardId == boardId);
+        
+        public void InitializeDb() => DbInitializer.Seed(appDbContext);
     }
 
 }

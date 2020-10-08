@@ -1,0 +1,11 @@
+@model BoardListViewModel;
+
+<div>
+    <h2> All the boards</h2>
+</div>
+@{
+    foreach (var board in Model.Boards)
+    {
+        @Html.Partial("BoardsSummary", board)
+    }
+}

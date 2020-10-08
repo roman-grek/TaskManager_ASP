@@ -13,13 +13,14 @@ namespace TaskManager.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
-        //private readonly ILogger _logger;
+        private readonly ILogger<AccountController> _logger;
         public AccountController(UserManager<ApplicationUser> userManager,
-         SignInManager<ApplicationUser> signInManager) 
+         SignInManager<ApplicationUser> signInManager,
+         ILogger<AccountController> logger) 
         {
             _userManager = userManager;
             _signInManager = signInManager;
-            //_logger = logger;
+            _logger = logger;
         }
 
         // GET: /Account/Login
@@ -45,7 +46,7 @@ namespace TaskManager.Controllers
                 var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
-                    //_logger.LogInformation(1, "User logged in.");
+                    _logger.LogInformation(1, "User logged in.");
                     return RedirectToLocal(returnUrl);
                 }
                 // if (result.RequiresTwoFactor)
@@ -54,7 +55,7 @@ namespace TaskManager.Controllers
                 // }
                 if (result.IsLockedOut)
                 {
-                    //_logger.LogWarning(2, "User account locked out.");
+                    _logger.LogWarning(2, "User account locked out.");
                     return View("Lockout");
                 }
                 else
@@ -97,7 +98,7 @@ namespace TaskManager.Controllers
                     //await _emailSender.SendEmailAsync(model.Email, "Confirm your account",
                     //    "Please confirm your account by clicking this link: <a href=\"" + callbackUrl + "\">link</a>");
                     await _signInManager.SignInAsync(user, isPersistent: false);
-                    //_logger.LogInformation(3, "User created a new account with password.");
+                    _logger.LogInformation(3, "User created a new account with password.");
                     return RedirectToLocal(returnUrl);
                 }
                 AddErrors(result);
@@ -113,7 +114,7 @@ namespace TaskManager.Controllers
         public async Task<IActionResult> LogOff()
         {
             await _signInManager.SignOutAsync();
-            //_logger.LogInformation(4, "User logged out.");
+            _logger.LogInformation(4, "User logged out.");
             return RedirectToAction(nameof(HomeController.Index), "Home");
         }
 

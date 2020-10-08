@@ -7,5 +7,6 @@ namespace TaskManager.Interfaces
     {
         IEnumerable<Board> Boards {get;}
         Board GetBoardByIdAsync(int boardId);
+        void InitializeDb();
     }
 }
