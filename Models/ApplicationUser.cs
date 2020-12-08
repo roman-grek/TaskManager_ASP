@@ -8,4 +8,10 @@ namespace TaskManager.Models
     {
         public string Name { get; set; }
     }
+
+    public class NewApplicationUser : ApplicationUser
+    {
+        public string Password { get; set; }
+    }
+
 }

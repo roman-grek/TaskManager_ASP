@@ -13,23 +13,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d080257e-0614-4789-b884-55b7830619f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dev.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prod.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ViewModels/BoardViewModels/BoardViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ViewModels/TaskViewModels/TaskDetailsViewModel.cs" afterDir="false" />
+    <list default="true" id="d080257e-0614-4789-b884-55b7830619f8" name="Default Changelist" comment="Change models">
+      <change afterPath="$PROJECT_DIR$/Controllers/TaskController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/UserController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TaskManager/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TaskManager/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TaskManager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TaskManager/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/BoardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/BoardController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/DBInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DBInitializer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Repositories/BoardRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/BoardRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Repositories/TableRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/TaskRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Interfaces/IBoardRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/IBoardRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/ITableRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/ITaskRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/ApplicationUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/ApplicationUser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Board.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Board.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Task.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Table.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Table.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ViewModels/BoardListViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ViewModels/BoardViewModels/BoardListViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Task.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Task.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,15 +41,19 @@
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/Dev.Dockerfile" />
         <option value="$PROJECT_DIR$/Models/Board.cs" />
-        <option value="$PROJECT_DIR$/Models/Task.cs" />
-        <option value="$PROJECT_DIR$/Models/ApplicationUser.cs" />
         <option value="$PROJECT_DIR$/ViewModels/BoardViewModels/BoardViewModel.cs" />
         <option value="$PROJECT_DIR$/ViewModels/TaskViewModels/TaskDetailsViewModel.cs" />
         <option value="$PROJECT_DIR$/Data/DBInitializer.cs" />
         <option value="$PROJECT_DIR$/Data/ApplicationDbContext.cs" />
+        <option value="$PROJECT_DIR$/Models/Task.cs" />
         <option value="$PROJECT_DIR$/Interfaces/IBoardRepository.cs" />
+        <option value="$PROJECT_DIR$/Interfaces/ITaskRepository.cs" />
+        <option value="$PROJECT_DIR$/Data/Repositories/TaskRepository.cs" />
         <option value="$PROJECT_DIR$/Data/Repositories/BoardRepository.cs" />
+        <option value="$PROJECT_DIR$/Controllers/TaskController.cs" />
         <option value="$PROJECT_DIR$/Controllers/BoardController.cs" />
+        <option value="$PROJECT_DIR$/Controllers/UserController.cs" />
+        <option value="$PROJECT_DIR$/Models/ApplicationUser.cs" />
       </list>
     </option>
   </component>
@@ -139,8 +139,16 @@
       <workItem from="1600867218525" duration="1053000" />
       <workItem from="1602156879633" duration="894000" />
       <workItem from="1607366029071" duration="5403000" />
-      <workItem from="1607440771270" duration="713000" />
+      <workItem from="1607440771270" duration="4069000" />
     </task>
+    <task id="LOCAL-00001" summary="Change models">
+      <created>1607441513515</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607441513516</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +168,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Change models" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change models" />
   </component>
   <component name="WindowStateProjectService">
     <state x="307" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600868428653">

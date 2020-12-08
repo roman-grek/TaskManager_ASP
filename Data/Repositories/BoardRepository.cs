@@ -16,11 +16,15 @@ namespace TaskManager.Data.Repositories
         {
             _appDbContext = dbContext;
         } 
-        public IEnumerable<Board> Boards => _appDbContext.Boards;
+        public DbSet<Board> Boards => _appDbContext.Boards;
 
         public async Task<Board> GetBoardByIdAsync(Guid boardId) =>
-            await _appDbContext.Boards.FirstOrDefaultAsync(b => b.Id == boardId);
-        
+            await _appDbContext.Boards.FindAsync(boardId);
+
+        public void Add(Board board) => _appDbContext.Boards.Add(board);
+
+        public Task<int> SaveChangesAsync() => _appDbContext.SaveChangesAsync();
+
         public void InitializeDb() => DbInitializer.Seed(_appDbContext);
     }
 

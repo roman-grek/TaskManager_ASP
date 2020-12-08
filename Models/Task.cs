@@ -13,7 +13,7 @@ namespace TaskManager.Models
         [DataType(DataType.MultilineText)]
         public string Description {get; set;}
         
-        public int BoardId {get; set;}
+        public string BoardId {get; set;}
         
         public int ListNum { get; set; }
         

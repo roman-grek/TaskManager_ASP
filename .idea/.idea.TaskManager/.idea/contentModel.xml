@@ -16,6 +16,8 @@
         <e p="AccountController.cs" t="Include" />
         <e p="BoardController.cs" t="Include" />
         <e p="HomeController.cs" t="Include" />
+        <e p="TaskController.cs" t="Include" />
+        <e p="UserController.cs" t="Include" />
       </e>
       <e p="Data" t="Include">
         <e p="ApplicationDbContext.cs" t="Include" />
@@ -27,13 +29,13 @@
         </e>
         <e p="Repositories" t="Include">
           <e p="BoardRepository.cs" t="Include" />
-          <e p="TableRepository.cs" t="Include" />
+          <e p="TaskRepository.cs" t="Include" />
         </e>
       </e>
       <e p="Dev.Dockerfile" t="Include" />
       <e p="Interfaces" t="Include">
         <e p="IBoardRepository.cs" t="Include" />
-        <e p="ITableRepository.cs" t="Include" />
+        <e p="ITaskRepository.cs" t="Include" />
       </e>
       <e p="Models" t="Include">
         <e p="ApplicationUser.cs" t="Include" />
