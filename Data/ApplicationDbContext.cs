@@ -16,7 +16,7 @@ namespace TaskManager.Data
         }
 
         public DbSet<Board> Boards {get; set;}
-        public DbSet<Card> Cards {get; set;}
+        public DbSet<Task> Tasks {get; set;}
         public DbSet<Table> Tables {get; set;}
     }
 }

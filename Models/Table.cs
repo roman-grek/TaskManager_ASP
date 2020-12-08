@@ -11,6 +11,6 @@ namespace TaskManager.Models
         public DateTime Updated {get; set;}
         public int BoardId {get; set;}
         public virtual Board Board {get; set;}
-        public List<Card> Cards {get; set;}
+        public List<Task> Cards {get; set;}
     }
 }

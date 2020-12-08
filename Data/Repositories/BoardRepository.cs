@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using TaskManager.Interfaces;
 using TaskManager.Models;
 
@@ -9,18 +10,18 @@ namespace TaskManager.Data.Repositories
 {
     public class BoardRepository : IBoardRepository
     {
-        private ApplicationDbContext appDbContext;
+        private readonly ApplicationDbContext _appDbContext;
 
         public BoardRepository(ApplicationDbContext dbContext)
         {
-            this.appDbContext = dbContext;
+            _appDbContext = dbContext;
         } 
-        public IEnumerable<Board> Boards => appDbContext.Boards;
+        public IEnumerable<Board> Boards => _appDbContext.Boards;
 
-        public Board GetBoardByIdAsync(int boardId) =>
-            appDbContext.Boards.FirstOrDefault(p => p.BoardId == boardId);
+        public async Task<Board> GetBoardByIdAsync(Guid boardId) =>
+            await _appDbContext.Boards.FirstOrDefaultAsync(b => b.Id == boardId);
         
-        public void InitializeDb() => DbInitializer.Seed(appDbContext);
+        public void InitializeDb() => DbInitializer.Seed(_appDbContext);
     }
 
 }

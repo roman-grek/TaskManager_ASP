@@ -24,23 +24,19 @@ namespace TaskManager.Data
             if (!context.Cards.Any())
             {
                 context.Cards.AddRange(
-                    new Card() {
-                        Table = Tables["TestTable1"],
+                    new Task() {
                         Title = "Card1",
                         Description = "Description1"
                     },
-                    new Card() {
-                        Table = Tables["TestTable1"],
+                    new Task() {
                         Title = "Card2",
                         Description = "Description2"
                     },
-                    new Card() {
-                        Table = Tables["TestTable2"],
+                    new Task() {
                         Title = "Card3",
                         Description = "Description3"
                     },
-                    new Card() {
-                        Table = Tables["TestTable3"],
+                    new Task() {
                         Title = "Card4",
                         Description = "Description4"
                     }
@@ -59,8 +55,8 @@ namespace TaskManager.Data
                 {
                     var boardsList = new Board[]
                     {
-                        new Board { Title = "Test1", Description = "Description1", Owner="8b9d829d-0912-4715-862f-35928d229d40" },
-                        new Board { Title = "Test2", Description = "Description2", Owner="8b9d829d-0912-4715-862f-35928d229d40" },
+                        new Board { Title = "Test1", Description = "Description1", UserId="8b9d829d-0912-4715-862f-35928d229d40" },
+                        new Board { Title = "Test2", Description = "Description2", UserId="8b9d829d-0912-4715-862f-35928d229d40" },
                     };
 
                     boards = new Dictionary<string, Board>();

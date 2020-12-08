@@ -2,14 +2,17 @@ using System;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Linq;
+using System.Security.Claims;
 using TaskManager.Models;
 using TaskManager.ViewModels;
 using TaskManager.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TaskManager.Controllers
 {
+    [Authorize]
     public class BoardController : Controller
     {
         private readonly IBoardRepository _boardRepository;
@@ -22,21 +25,16 @@ namespace TaskManager.Controllers
             _userManager = userManager;
             _logger = logger;
         }
-
-        public ViewResult Index() {
-            //_boardRepository.InitializeDb();
-            var vm = new BoardListViewModel();
-            var userId = _userManager.GetUserId(HttpContext.User);
-            vm.Boards = _boardRepository.Boards.Where(p => p.Owner == userId);
-            _logger.LogInformation(1, "User boards are shown");
-            return View(vm);
-        }
-
-        [HttpGet("/{id}")]
-        public ViewResult Details(int id)
+        
+        // Get all boards belonging to the currently logged in user
+        [HttpGet]
+        public IActionResult All()
         {
-            var board = _boardRepository.GetBoardByIdAsync(id);
-            return View(board);
-        } 
+            var claims = this.User;
+            ClaimsPrincipal currentUser = this.User;
+            var userId = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+            var boards = _boardRepository.Boards.Where(board => board.UserId == userId).ToList();
+            return View(boards);
+        }
     }
 }
