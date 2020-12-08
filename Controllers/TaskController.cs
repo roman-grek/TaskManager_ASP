@@ -18,9 +18,9 @@ namespace TaskManager.Controllers
         private readonly ITaskRepository _taskRepository;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<TaskController> _logger;
-        
+
         // Initialize the private value _context
-        public TaskController(IBoardRepository boardRepository, 
+        public TaskController(IBoardRepository boardRepository,
             ITaskRepository taskRepository,
             UserManager<ApplicationUser> userManager,
             ILogger<TaskController> logger)
@@ -30,45 +30,50 @@ namespace TaskManager.Controllers
             _userManager = userManager;
             _logger = logger;
         }
-        
+
         // Open a task
         [HttpGet]
-        public async Task<IActionResult> Open([FromRoute]Guid id)
+        public async Task<IActionResult> Open([FromRoute] Guid id)
         {
 
             var task = await _taskRepository.Tasks.FindAsync(id);
             var boardId = Guid.Parse(task.BoardId);
             var board = await _boardRepository.GetBoardByIdAsync(boardId);
-            return View(model: new TaskDetailsViewModel { Task = task, Board = board });
+            return View(model: new TaskDetailsViewModel {Task = task, Board = board});
         }
-        
+
         // Serve the add task page
         [HttpGet]
-        public IActionResult Add([FromRoute]Guid id)
+        public IActionResult Add([FromRoute] Guid id)
         {
-            return View(new Models.Task { BoardId = id.ToString() });
+            return View(new Models.Task {BoardId = id.ToString()});
         }
-        
+
         // Handle the creation of a new task
         [HttpPost]
         public async Task<IActionResult> Add([FromForm] Models.Task task)
         {
-            var routeValues = new RouteValueDictionary {
-               {"id", task.BoardId}
-           };
-            _taskRepository.Tasks.Add(new Models.Task { Title = task.Title, Description = task.Description, BoardId = task.BoardId.ToString(), ListNum = task.ListNum });
+            var routeValues = new RouteValueDictionary
+            {
+                {"id", task.BoardId}
+            };
+            _taskRepository.Tasks.Add(new Models.Task
+            {
+                Title = task.Title, Description = task.Description, BoardId = task.BoardId.ToString(),
+                ListNum = task.ListNum
+            });
             await _boardRepository.SaveChangesAsync();
             return RedirectToAction("Open", "Board", routeValues);
         }
-        
+
         // Return the view to edit the task
         [HttpGet]
-        public async Task<IActionResult> Edit([FromRoute]Guid id)
+        public async Task<IActionResult> Edit([FromRoute] Guid id)
         {
-            var task = await _context.Tasks.FindAsync(id);
+            var task = await _taskRepository.GetTaskByIdAsync(id);
             return View(task);
         }
-        
+
         // Returns the updated task and saves the changes
         [HttpPost]
         public async Task<IActionResult> Edit([FromForm] Models.Task taskUpdate)
@@ -81,24 +86,24 @@ namespace TaskManager.Controllers
             task.ListNum = taskUpdate.ListNum;
 
 
-            var routeValues = new RouteValueDictionary 
+            var routeValues = new RouteValueDictionary
             {
-               {"id", task.Id.ToString()}
+                {"id", task.Id.ToString()}
             };
             _taskRepository.Tasks.Update(task);
             await _boardRepository.SaveChangesAsync();
 
             return RedirectToAction(nameof(Open), "Task", routeValues);
         }
-        
+
         // The delete function for tasks
         [HttpGet]
-        public async Task<IActionResult> Delete([FromRoute]Guid id)
+        public async Task<IActionResult> Delete([FromRoute] Guid id)
         {
             var task = await _taskRepository.GetTaskByIdAsync(id);
 
-            var routeValues = new RouteValueDictionary 
-            { 
+            var routeValues = new RouteValueDictionary
+            {
                 {"id", task.BoardId}
             };
 
@@ -107,5 +112,5 @@ namespace TaskManager.Controllers
 
             return RedirectToAction(nameof(Open), "Board", routeValues);
         }
-
+    }
 }

@@ -21,9 +21,9 @@ namespace TaskManager.Data
                 context.Tables.AddRange(Tables.Select(c => c.Value));
             }
 
-            if (!context.Cards.Any())
+            if (!context.Tasks.Any())
             {
-                context.Cards.AddRange(
+                context.Tasks.AddRange(
                     new Task() {
                         Title = "Card1",
                         Description = "Description1"

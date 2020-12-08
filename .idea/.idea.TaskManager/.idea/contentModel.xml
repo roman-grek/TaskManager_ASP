@@ -71,22 +71,29 @@
           <e p="Register.cshtml" t="Include" />
         </e>
         <e p="Board" t="Include">
-          <e p="Details.cshtml" t="Include" />
-          <e p="Index.cshtml" t="Include" />
+          <e p="Add.cshtml" t="Include" />
+          <e p="All.cshtml" t="Include" />
+          <e p="Edit.cshtml" t="Include" />
+          <e p="Error.cshtml" t="Include" />
+          <e p="Open.cshtml" t="Include" />
         </e>
         <e p="Home" t="Include">
           <e p="Index.cshtml" t="Include" />
           <e p="Privacy.cshtml" t="Include" />
         </e>
         <e p="Shared" t="Include">
-          <e p="BoardsSummary.cshtml" t="Include" />
           <e p="Error.cshtml" t="Include" />
           <e p="_Layout.cshtml" t="Include" />
           <e p="_LoginPartial.cshtml" t="Include" />
           <e p="_ValidationScriptsPartial.cshtml" t="Include" />
         </e>
-        <e p="Table" t="Include">
-          <e p="List.cshtml" t="Include" />
+        <e p="Task" t="Include">
+          <e p="Add.cshtml" t="Include" />
+          <e p="Edit.cshtml" t="Include" />
+          <e p="Open.cshtml" t="Include" />
+        </e>
+        <e p="User" t="Include">
+          <e p="AddUser.cshtml" t="Include" />
         </e>
         <e p="_ViewImports.cshtml" t="Include" />
         <e p="_ViewStart.cshtml" t="Include" />
@@ -106,11 +113,13 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="wwwroot" t="Include">
         <e p="css" t="Include">
+          <e p="materialize.css" t="Include" />
+          <e p="materialize.min.css" t="Include" />
           <e p="site.css" t="Include" />
         </e>
         <e p="favicon.ico" t="Include" />
         <e p="js" t="Include">
-          <e p="draggable.js" t="Include" />
+          <e p="materialize.js" t="Include" />
           <e p="site.js" t="Include" />
         </e>
         <e p="lib" t="Include">

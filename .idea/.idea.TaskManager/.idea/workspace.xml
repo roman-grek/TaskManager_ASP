@@ -13,24 +13,42 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d080257e-0614-4789-b884-55b7830619f8" name="Default Changelist" comment="Change models">
-      <change afterPath="$PROJECT_DIR$/Controllers/TaskController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controllers/UserController.cs" afterDir="false" />
+    <list default="true" id="d080257e-0614-4789-b884-55b7830619f8" name="Default Changelist" comment="Update controllers">
+      <change afterPath="$PROJECT_DIR$/Views/Board/Add.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/Board/Edit.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/Board/Error.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/Board/Open.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/Task/Add.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/Task/Edit.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/User/AddUser.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wwwroot/css/materialize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wwwroot/css/materialize.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wwwroot/js/materialize.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TaskManager/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TaskManager/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TaskManager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TaskManager/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/BoardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/BoardController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/BoardRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/BoardRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/TableRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/TaskRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interfaces/IBoardRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/IBoardRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interfaces/ITableRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/ITaskRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/ApplicationUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/ApplicationUser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Task.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Task.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AccountController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/TaskController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/TaskController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DBInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DBInitializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Board/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Board/All.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Board/Index.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/BoardsSummary.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Table/List.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Task/Open.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/_ViewImports.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/_ViewImports.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,17 +61,32 @@
         <option value="$PROJECT_DIR$/Models/Board.cs" />
         <option value="$PROJECT_DIR$/ViewModels/BoardViewModels/BoardViewModel.cs" />
         <option value="$PROJECT_DIR$/ViewModels/TaskViewModels/TaskDetailsViewModel.cs" />
-        <option value="$PROJECT_DIR$/Data/DBInitializer.cs" />
         <option value="$PROJECT_DIR$/Data/ApplicationDbContext.cs" />
         <option value="$PROJECT_DIR$/Models/Task.cs" />
         <option value="$PROJECT_DIR$/Interfaces/IBoardRepository.cs" />
         <option value="$PROJECT_DIR$/Interfaces/ITaskRepository.cs" />
         <option value="$PROJECT_DIR$/Data/Repositories/TaskRepository.cs" />
         <option value="$PROJECT_DIR$/Data/Repositories/BoardRepository.cs" />
-        <option value="$PROJECT_DIR$/Controllers/TaskController.cs" />
         <option value="$PROJECT_DIR$/Controllers/BoardController.cs" />
-        <option value="$PROJECT_DIR$/Controllers/UserController.cs" />
         <option value="$PROJECT_DIR$/Models/ApplicationUser.cs" />
+        <option value="$PROJECT_DIR$/Controllers/AccountController.cs" />
+        <option value="$PROJECT_DIR$/Data/DBInitializer.cs" />
+        <option value="$PROJECT_DIR$/Views/Board/Add.cshtml" />
+        <option value="$PROJECT_DIR$/Views/Board/All.cshtml" />
+        <option value="$PROJECT_DIR$/Views/Board/Edit.cshtml" />
+        <option value="$PROJECT_DIR$/Views/Board/Error.cshtml" />
+        <option value="$PROJECT_DIR$/Views/Board/Open.cshtml" />
+        <option value="$PROJECT_DIR$/Views/Task/Add.cshtml" />
+        <option value="$PROJECT_DIR$/Views/Task/Edit.cshtml" />
+        <option value="$PROJECT_DIR$/Views/_ViewImports.cshtml" />
+        <option value="$PROJECT_DIR$/Views/Task/Open.cshtml" />
+        <option value="$PROJECT_DIR$/Controllers/TaskController.cs" />
+        <option value="$PROJECT_DIR$/Views/User/AddUser.cshtml" />
+        <option value="$PROJECT_DIR$/Controllers/UserController.cs" />
+        <option value="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" />
+        <option value="$PROJECT_DIR$/wwwroot/css/materialize.css" />
+        <option value="$PROJECT_DIR$/wwwroot/css/materialize.min.css" />
+        <option value="$PROJECT_DIR$/wwwroot/js/materialize.js" />
       </list>
     </option>
   </component>
@@ -67,6 +100,7 @@
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -139,7 +173,7 @@
       <workItem from="1600867218525" duration="1053000" />
       <workItem from="1602156879633" duration="894000" />
       <workItem from="1607366029071" duration="5403000" />
-      <workItem from="1607440771270" duration="4069000" />
+      <workItem from="1607440771270" duration="7521000" />
     </task>
     <task id="LOCAL-00001" summary="Change models">
       <created>1607441513515</created>
@@ -148,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607441513516</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update controllers">
+      <created>1607444940361</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607444940361</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +210,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Change models" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change models" />
+    <MESSAGE value="Update controllers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update controllers" />
   </component>
   <component name="WindowStateProjectService">
     <state x="307" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600868428653">

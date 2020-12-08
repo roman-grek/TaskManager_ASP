@@ -1,0 +1,25 @@
+@using System.Globalization
+@model TaskDetailsViewModel
+@{
+    ViewData["Title"] = "Task: " + Model.Task.Title;
+}
+<div>
+    <a  asp-action=Delete asp-route-id="@Model.Task.Id" class="waves-effect waves-light red btn"> Delete <i class="material-icons">delete</i></a>
+</div>
+<div class="fixed-action-btn">
+    <a asp-action=Edit asp-controller="Task" asp-route-id="@Model.Task.Id" class="btn-floating btn-large waves-effect waves-light yellow"><i class="large material-icons">edit</i></a>
+</div>
+
+<div class="container">
+    <ul class="collection">
+        <li class="collection-item avatar">
+            <span class="title"><h3>Description</h3></span>
+            <p> @Model.Task.Description</p>
+        </li>
+        <!-- <li class="collection-item avatar">
+            <span class="title"><h3>Due Date</h3></span>
+            <p> @Model.Task.DueDate.ToString(CultureInfo.InvariantCulture) </p>
+        </li> -->
+    </ul>
+    <a asp-action=Open asp-controller=Board asp-route-id="@Model.Board.Id" class="btn-large waves-effect center-align" > Return to Board <i class="large material-icons">arrow_back</i></a>
+</div>

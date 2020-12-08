@@ -10,14 +10,14 @@ namespace TaskManager.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<UserController> _logger;
-        
+
         // Initialize the needed private variables
         public UserController(UserManager<ApplicationUser> userManager, ILogger<UserController> logger)
         {
             _userManager = userManager;
             _logger = logger;
         }
-        
+
         // Get the view for adding a user
         [HttpGet]
         public IActionResult AddUser()
@@ -36,7 +36,8 @@ namespace TaskManager.Controllers
                 Email = newAppUser.Email
             };
             await _userManager.CreateAsync(appUser, newAppUser.Password);
-            
-            return RedirectToAction("Login","Account");
+
+            return RedirectToAction("Login", "Account");
         }
+    }
 }
